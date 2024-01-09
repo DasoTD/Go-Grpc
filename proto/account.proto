@@ -1,0 +1,14 @@
+syntax = "proto3";
+package pb;
+option go_package = "github.com/dasotd/go_grpc/pb";
+import "google/protobuf/timestamp.proto";
+
+
+message Account {
+    string username = 1;
+    string firstname =2;
+    string lastname = 3;
+    string email = 4;
+    google.protobuf.Timestamp created_at = 5;
+}
+

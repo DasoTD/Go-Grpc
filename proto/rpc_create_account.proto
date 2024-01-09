@@ -1,0 +1,15 @@
+syntax = "proto3";
+package pb;
+option go_package = "github.com/dasotd/go_grpc/pb";
+import "account.proto";
+
+message CreateAccountRequest {
+    string username = 1;
+    string firstname =2;
+    string lastname = 3;
+    string email = 4;
+}
+
+message CreateAccountResponse {
+    Account account = 1;
+}
