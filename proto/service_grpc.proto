@@ -1,0 +1,14 @@
+syntax = "proto3";
+package pb;
+option go_package = "github.com/dasotd/go_grpc/pb";
+import "rpc_create_account.proto";
+import "rpc_get_account.proto";
+
+message forGetAccountsToWork{}
+
+service AccountAPI {
+    rpc CreateAccount(CreateAccountRequest) returns(CreateAccountResponse);
+
+    rpc GetAccount(GetAccountRequest) returns(GetAccountResponse);
+    rpc GetAccounts(forGetAccountsToWork) returns(GetAllUserResponse);
+}
